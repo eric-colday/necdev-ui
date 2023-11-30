@@ -1,9 +1,10 @@
-import Image from 'next/image'
+import React from "react";
+import HomeSection from "@/components/HomeSection";
 
 export default function Home() {
   return (
     <main>
-      home
+      <HomeSection />
     </main>
-  )
+  );
 }

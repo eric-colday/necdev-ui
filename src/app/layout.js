@@ -1,10 +1,9 @@
 import Navbar from "@/components/Navbar";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
-import { Inter } from "next/font/google";
+import { inter, yeseva_One } from "@/fonts/fonts";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
