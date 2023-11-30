@@ -16,7 +16,7 @@ const links = [
   {
     id: 2,
     title: "A propos",
-    url: "#a-propos",
+    url: "#apropos",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const Navbar = () => {
           ? { backgroundColor: "#0f172a" }
           : { backgroundColor: "white" }
       }
-      className="fixed top-0 left-0 right-0 flex justify-around items-center h-[80px] gap-[100px] border-b-[1px] border-[#468bff] max-[375px]:gap-[50px] "
+      className="fixed top-0 left-0 right-0 z-50 flex justify-around items-center h-[80px] gap-[100px] border-b-[1px] border-[#468bff] max-[375px]:gap-[50px] "
     >
       <Link href="#accueil" className="font-bold text-[20px] text-[#468bff] ">
         NecDev
@@ -83,7 +83,7 @@ const Navbar = () => {
         <div
           className={
             showLinks
-              ? "flex flex-col justify-center items-center gap-[20px] w-full h-[300vw] absolute left-0 pt-[16rem] "
+              ? "flex flex-col justify-center items-center gap-[20px] w-full h-[300vw] absolute left-0 pt-[26rem] "
               : "flex justify-center items-center gap-[20px] text-[16px] max-[768px]:hidden  "
           }
           style={
