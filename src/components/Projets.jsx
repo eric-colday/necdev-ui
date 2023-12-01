@@ -90,7 +90,7 @@ const Projets = () => {
               </div>
               <div className="flex items-center gap-10 text-xl font-semibold text-[#7c8587]">
                 <Link
-                  href="https://github.com/eric-colday/store-ui"
+                  href="https://github.com/eric-colday/admin-ui"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#7c8587] hover:text-[#7c8587] text-center"
@@ -99,7 +99,7 @@ const Projets = () => {
                   <GitHubIcon className="ml-2 -mt-1 inline-block h-5 w-5 mr-1 stroke" />
                 </Link>
                 <Link
-                  href="https://necstore.vercel.app/"
+                  href="https://necadmin-ui.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#7c8587] hover:text-[#7c8587] text-center"
