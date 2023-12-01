@@ -11,11 +11,11 @@ const Projets = () => {
   return (
     <section
       id="projets"
-      className="px-20 py-60 border-y max-[768px]:px-5"
+      className="px-20 py-60 border-y-[0.5px] max-[768px]:px-5"
       style={
         theme === "dark"
           ? { backgroundColor: "#0f172a" }
-          : { backgroundColor: "#FBFDFF" }
+          : { backgroundColor: "#F4FAFF" }
       }
     >
       <div className="flex flex-col gap-3 pb-14 pl-10 ">

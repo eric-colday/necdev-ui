@@ -29,7 +29,7 @@
   }
 }
 
-html{
+html {
   /* max-width: 100vw; */
   /* overflow-x: hidden; */
   /* scroll-snap-type: y mandatory; */
@@ -48,7 +48,6 @@ body {
   margin: auto;
 }
 
-
 a {
   color: inherit;
   text-decoration: none;
@@ -66,4 +65,14 @@ a {
 .dark {
   background-color: #0d1520;
   color: #bbb;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
 }
