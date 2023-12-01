@@ -59,7 +59,6 @@ const Navbar = () => {
                 ? "cursor-pointer z-[100] text-[#468bff] text-[30px] max-[768px]:cursor-pointer max-[768px]:z-[100] max-[768px]:text-[30px] "
                 : "hidden"
             }
-            //   variants={variants}
           />
         ) : (
           <Image
@@ -83,7 +82,7 @@ const Navbar = () => {
         <div
           className={
             showLinks
-              ? "flex flex-col justify-center items-center gap-[20px] w-full h-[300vw] absolute left-0 pt-[26rem] "
+              ? "flex flex-col justify-center items-center gap-[20px] w-full h-[400vw] absolute left-0 pt-[26rem] "
               : "flex justify-center items-center gap-[20px] text-[16px] max-[768px]:hidden  "
           }
           style={
