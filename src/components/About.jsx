@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="apropos" className=" ">
+    <section id="apropos">
       <div className="flex justify-center items-center h-full gap-[60px] px-40 py-60 max-[1101px]:px-4 max-[812px]:flex-col  ">
         <img
           src="/img/about.svg"
@@ -24,8 +24,7 @@ const About = () => {
             statiques aux applications Web complètes.
           </p>
           <p className="text-[#7c8587] ">
-            Lorsque je ne code pas, vous pouvez me trouver en train de jouer au
-            football, de regarder des films ou de lire des livres.
+            Lorsque je ne code pas, vous pouvez me trouver en train de faire de la musique, de regarder des films ou de faire du sport.
           </p>
           <p className="text-[#7c8587] ">
             Voici quelques technologies avec lesquelles j'ai travaillé
