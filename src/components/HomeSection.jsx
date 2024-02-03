@@ -32,7 +32,7 @@ const HomeSection = () => {
               Eric Colday Noubissi
             </h2>
             <span className="text-[50px] font-extrabold text-[#7c8587] max-[768px]:text-center max-[425px]:text-[40px] ">
-              Développeur <br /> Front-end
+              Développeur <br /> Full Stack
             </span>
             <div className="flex gap-[20px] ">
               <Link

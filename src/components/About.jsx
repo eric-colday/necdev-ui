@@ -14,8 +14,8 @@ const About = () => {
             À propos de moi
           </h2>
           <p className="text-[#7c8587] ">
-            Je suis un développeur front-end basé à Strasbourg, France. J'ai une
-            passion pour la création de sites Web et d'applications Web qui
+            Je suis un développeur full stack basé à Strasbourg, France. J'ai une
+            passion pour la création des applications Web et mobile qui
             améliorent l'expérience utilisateur.
           </p>
           <p className="text-[#7c8587] ">

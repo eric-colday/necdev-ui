@@ -30,7 +30,7 @@ const Projets = () => {
         <div className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col ">
           <div className="w-1/2 h-auto rounded-2xl overflow-hidden max-[768px]:w-full  ">
             <Link
-              href="https://necstore.vercel.app/"
+              href="https://necstore-fullstack.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -51,11 +51,11 @@ const Projets = () => {
               </p>
               <div className="flex items-center gap-3 ">
                 <div className="border p-4 text-center">Nextjs</div>
-                <div className="border p-4 text-center">Vanila CSS</div>
+                <div className="border p-4 text-center">Nodejs/Mongodb</div>
               </div>
               <div className="flex items-center gap-10 text-xl font-semibold text-[#7c8587]">
                 <Link
-                  href="https://github.com/eric-colday/store-ui"
+                  href="https://github.com/eric-colday/necstore-fullstack"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#7c8587] hover:text-[#7c8587] text-center"
@@ -64,7 +64,7 @@ const Projets = () => {
                   <GitHubIcon className="ml-2 -mt-1 inline-block h-5 w-5 mr-1 stroke" />
                 </Link>
                 <Link
-                  href="https://necstore.vercel.app/"
+                  href="https://necstore-fullstack.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#7c8587] hover:text-[#7c8587] text-center"
