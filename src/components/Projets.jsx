@@ -19,7 +19,7 @@ const Projets = () => {
       }
     >
       <div className="flex flex-col gap-3 pb-14 pl-10 ">
-        <h2 className="text-[25px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
+        <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
           Portfolio
         </h2>
         <span className="text-[30px] max-[425px]:text-[35px]">
@@ -122,6 +122,54 @@ const Projets = () => {
                 className="w-full h-auto transform translate-y-0 transition-transform duration-[10s] ease-in-out hover:translate-y-[-69%] "
               />
             </Link>
+          </div>
+        </div>
+        <div className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col ">
+          <div className="w-1/2 h-auto rounded-2xl overflow-hidden max-[768px]:w-full  ">
+            <Link
+              href="https://necstore.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/img/necapp.png"
+                alt="boutique ecommerce necstore"
+                className="w-full h-auto transform translate-y-0 transition-transform duration-[10s] ease-in-out hover:translate-y-[-77%] "
+              />
+            </Link>
+          </div>
+          <div className="w-1/2 h-auto max-[768px]:w-full ">
+            <div className="flex flex-col justify-center items-center gap-8 h-full">
+              <h2 className="text-4xl font-bold text-[#7c8587]">NecApp</h2>
+              <p className=" text-center text-[#7c8587] px-10 max-[768px]:px-5 max-[425px]:px-0">
+                Application mobile permettant de découvrir, choisir et commander les
+                meilleurs menus des restaurants à portée de main !
+              </p>
+              <div className="flex items-center gap-3 ">
+                <div className="border p-4 text-center">React Native</div>
+                <div className="border p-4 text-center">Nodejs/Mongodb</div>
+              </div>
+              <div className="flex items-center gap-10 text-xl font-semibold text-[#7c8587]">
+                <Link
+                  href="https://github.com/eric-colday/necapp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#7c8587] hover:text-[#7c8587] text-center"
+                >
+                  Code
+                  <GitHubIcon className="ml-2 -mt-1 inline-block h-5 w-5 mr-1 stroke" />
+                </Link>
+                <Link
+                  href="https://necstore.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#7c8587] hover:text-[#7c8587] text-center"
+                >
+                  Live Demo
+                  <OpenInNewIcon className="ml-2 -mt-1 inline-block h-5 w-5 mr-1 stroke" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>

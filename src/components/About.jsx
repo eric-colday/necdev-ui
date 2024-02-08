@@ -10,8 +10,8 @@ const About = () => {
           className="w-[400px] h-[400px] object-cover animate-move "
         />
         <div className="flex flex-col justify-center gap-[20px] ">
-          <h2 className="text-[40px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]  ">
-            À propos de moi
+          <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]  ">
+            A propos de moi
           </h2>
           <p className="text-[#7c8587] ">
             Je suis un développeur full stack basé à Strasbourg, France. J'ai une

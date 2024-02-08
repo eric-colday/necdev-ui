@@ -34,7 +34,7 @@ const HomeSection = () => {
             <span className="text-[50px] font-extrabold text-[#7c8587] max-[768px]:text-center max-[425px]:text-[40px] ">
               Développeur <br /> Full Stack
             </span>
-            <div className="flex gap-[20px] ">
+            <div className="flex gap-[20px] "> 
               <Link
                 href="https://github.com/eric-colday"
                 target="_blank"
