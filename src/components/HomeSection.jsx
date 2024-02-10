@@ -22,7 +22,7 @@ const HomeSection = () => {
       <div className="flex flex-col items-center gap-[50px] ">
         <div className="flex gap-[60px] justify-center items-center pt-[10rem] max-[768px]:flex-col max-[768px]:pt-[3rem] max-[768px]:gap-[40px] ">
           <img
-            src="/img/nec.jpeg"
+            src="/img/nec.png"
             alt="NecDev"
             className="rounded-full w-[30%] h-[30%] animate-move max-[768px]:w-[50%] max-[768px]:h-[50%] max-[425px]:w-[70%] max-[425px]:h-[70%] "
           />
