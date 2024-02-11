@@ -54,14 +54,14 @@ const Contact = () => {
 
   return (
     <footer id="contact" className="pt-32">
-      <div className="flex flex-col justify-center items-center py-10 ">
-        <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
+      <div className="flex flex-col py-10 pl-16 ">
+        <h2 className="pb-4 text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
           Contact
         </h2>
-        <span className="text-center">
-          Prêt à apporter mes compétences à votre équipe. Contactez-moi pour
-          découvrir comment je peux contribuer à votre entreprise.
-        </span>
+        <p className="text-[30px] max-[425px]:text-[20px] pr-6">
+          N'hésitez pas à me contacter pour toute question ou proposition de
+          collaboration
+        </p>
       </div>
       <div className="flex justify-center items-center gap-[70px] px-20  max-[1024px]:flex-col max-[1024px]:px-10 ">
         <div>
@@ -159,7 +159,7 @@ const Contact = () => {
         </div>
       </div>
       <div className="flex justify-around gap-[20px] p-20 ">
-        <div className=" flex gap-[10px] max-[412px]:flex-col max-[412px]:items-center ">
+        <div className=" flex gap-[10px] max-[412px]:flex-col max-[412px]:items-center max-[412px]:text-center">
           <div>© Copyright 2023, Eric Colday Noubissi</div>
           <ul className="flex gap-[10px]">
             <li>

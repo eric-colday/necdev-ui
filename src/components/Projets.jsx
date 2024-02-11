@@ -18,11 +18,11 @@ const Projets = () => {
           : { backgroundColor: "#F4FAFF" }
       }
     >
-      <div className="flex flex-col gap-3 pb-14 pl-10 ">
-        <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
+      <div className="flex flex-col gap-3 pb-14 pl-10 "> 
+        <h2 className="text-[50px] font-extrabold text-[rgb(124,133,135)] max-[425px]:text-[35px]">
           Portfolio
         </h2>
-        <span className="text-[30px] max-[425px]:text-[35px]">
+        <span className="text-[30px] max-[425px]:text-[20px]">
           Chaque projet est une pièce unique de développement
         </span>
       </div>
@@ -50,8 +50,8 @@ const Projets = () => {
                 élégance et confort
               </p>
               <div className="flex items-center gap-3 ">
-                <div className="border p-4 text-center">Nextjs</div>
-                <div className="border p-4 text-center">Nodejs/Mongodb</div>
+                <div className="border p-4 text-center text-xs">Nextjs</div>
+                <div className="border p-4 text-center text-xs">Nodejs/Mongodb</div>
               </div>
               <div className="flex items-center gap-10 text-xl font-semibold text-[#7c8587]">
                 <Link
@@ -85,8 +85,8 @@ const Projets = () => {
                 commandes et blog de la boutique e-commerce NecStore
               </p>
               <div className="flex items-center gap-3 ">
-                <div className="border p-4 text-center">Nextjs</div>
-                <div className="border p-4 text-center">Tailwind CSS</div>
+                <div className="border p-4 text-center text-xs">Nextjs</div>
+                <div className="border p-4 text-center text-xs">Tailwind CSS</div>
               </div>
               <div className="flex items-center gap-10 text-xl font-semibold text-[#7c8587]">
                 <Link
@@ -146,8 +146,8 @@ const Projets = () => {
                 meilleurs menus des restaurants à portée de main !
               </p>
               <div className="flex items-center gap-3 ">
-                <div className="border p-4 text-center">React Native</div>
-                <div className="border p-4 text-center">Nodejs/Mongodb</div>
+                <div className="w-full border p-4 text-center text-xs">React-Native</div>
+                <div className="w-full border p-4 text-center text-xs ">Nodejs/Mongodb</div>
               </div>
               <div className="flex items-center gap-10 text-xl font-semibold text-[#7c8587]">
                 <Link
