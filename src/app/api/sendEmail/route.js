@@ -3,26 +3,28 @@ import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
-    const { subject, message } = await request.json();
+    const { name, email, message, subject } = await request.json();
 
     const transporter = nodemailer.createTransport({
-      service: "zoho",
-      host: "smtpro.zoho.in",
-      port: 465,
-      secure: true,
+      service: "gmail",
+    //   host: "smtpro.zoho.in",
+    //   port: 465,
+    //   secure: true,
       auth: {
-        user: "careeros@tryporpra.com",
+        user: "rcnoubissi@gmail.com",
         pass: process.env.NEXT_PUBLIC_PASSWORD,
       },
     });
 
     const mailOption = {
-      from: "careeros@tryporpra.com",
-      to: "augustinerepos@gmail.com",
-      subject: "Send Email Tutorial",
+      from: "rcnoubissi@gmail.com",
+      to: "rcnoubissi@gmail.com",
+      subject: "Nouveau message de votre portfolio",
       html: `
-        <h3>Hello Augustine</h3>
-        <li> title: ${subject}</li>
+        <h3>Hello Eric N., Tu as un nouveau message</h3>
+        <li> Nom: ${name}</li>
+        <li> Email: ${email}</li>
+        <li> Objet: ${subject}</li>
         <li> message: ${message}</li> 
         `,
     };
