@@ -1,8 +1,11 @@
+import Link from "next/link";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
 
 const Confidentialite = () => {
   return (
-    <div className="p-28">
+    <div className="pt-28 px-20 max-[768px]:px-10 max-[425px]:px-5">
       <h1 className="text-3xl font-bold mb-5 ">
         Politique de Confidentialité pour NecApp
       </h1>
@@ -86,10 +89,35 @@ const Confidentialite = () => {
         à notre politique de confidentialité, veuillez nous contacter à
         rcnoubissi@gmail.com.
       </p>
-      <p className="my-5">
+      <p className="my-7 ">
         En utilisant NecApp, vous consentez à cette politique de
         confidentialité.
       </p>
+      <div className="flex justify-around gap-[20px] py-6 ">
+        <div className=" flex gap-[10px] max-[412px]:flex-col max-[412px]:items-center max-[412px]:text-center">
+          <div>© Copyright 2023, Eric Colday Noubissi</div>
+          <ul className="flex gap-[10px]">
+            <li>
+              <Link
+                href="https://www.linkedin.com/in/ecnoubissi/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <LinkedInIcon />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://github.com/eric-colday"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GitHubIcon />
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
