@@ -54,16 +54,17 @@ const Contact = () => {
 
   return (
     <footer id="contact" className="pt-32">
-      <div className="flex flex-col py-10 pl-16 ">
-        <h2 className="pb-4 text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
+      <div className="flex flex-col items-center py-10 pl-16 ">
+        <h2 className="pb-4 text-[50px] text-center font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
           Contact
         </h2>
-        <p className="text-[30px] max-[425px]:text-[20px] pr-6">
+        <div className="mb-10 w-10 border-2 border-[#7c8587]"></div>
+        <p className="text-center">
           N'hésitez pas à me contacter pour toute question ou proposition de
           collaboration
         </p>
       </div>
-      <div className="flex justify-center items-center gap-[70px] px-20  max-[1024px]:flex-col max-[1024px]:px-10 ">
+      <div className="flex justify-center items-center gap-[70px] px-20 pb-40  max-[1024px]:flex-col max-[1024px]:px-10 ">
         <div>
           <Lottie
             animationData={require("/public/img/animation_lo8heyow.json")}
@@ -149,7 +150,7 @@ const Contact = () => {
                 {err && <div className="text-red-500">{err}</div>}
                 <button
                   type="submit"
-                  className="border border-gray-400 hover:border-2 mt-3 text-white rounded-md p-4 w-1/2 max-[1024px]:w-full "
+                  className="cursor-pointer border border-[#7c8587] hover:border-2 transition-all duration-300 ease-in-out mt-3 text-white p-4 w-1/2 max-[1024px]:w-full "
                 >
                   Envoyer
                 </button>
@@ -158,9 +159,9 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="flex justify-around gap-[20px] p-20 ">
+      <div className="flex justify-around gap-[20px] p-5 border-t ">
         <div className=" flex gap-[10px] max-[412px]:flex-col max-[412px]:items-center max-[412px]:text-center">
-          <div>© Copyright 2023, Eric Colday Noubissi</div>
+          <div>© Copyright 2024, Eric Colday Noubissi</div>
           <ul className="flex gap-[10px]">
             <li>
               <Link

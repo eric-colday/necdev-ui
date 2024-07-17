@@ -10,23 +10,28 @@ import ThemeToggle from "./themeToggle/ThemeToggle";
 const links = [
   {
     id: 1,
-    title: "Accueil",
-    url: "#accueil",
+    title: "A propos",
+    url: "/a-propos",
   },
   {
     id: 2,
-    title: "A propos",
-    url: "#apropos",
+    title: "Services",
+    url: "/",
   },
   {
     id: 3,
-    title: "Projets",
-    url: "#projets",
+    title: "Realisations",
+    url: "/",
   },
   {
     id: 4,
+    title: "Blog",
+    url: "/",
+  },
+  {
+    id: 5,
     title: "Contact",
-    url: "#contact",
+    url: "/",
   },
 ];
 
@@ -47,8 +52,8 @@ const Navbar = () => {
       }
       className="fixed top-0 left-0 right-0 z-50 flex justify-around items-center h-[80px] gap-[100px] border-b-[1px] border-[#468bff] max-[375px]:gap-[50px] "
     >
-      <Link href="/" className="font-bold text-[20px] text-[#468bff] ">
-        NecDev
+      <Link href="/" className="font-bold text-[20px] text-[#468bff] p-2 ">
+        <div>Nec</div>
       </Link>
       <div className="flex items-center gap-10">
         {showLinks ? (
