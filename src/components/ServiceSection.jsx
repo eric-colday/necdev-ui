@@ -27,7 +27,7 @@ function ServiceSection() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, 
-        amount: 0.6 
+        amount: 0.4
         }}
         className=" h-full px-10 py-36 "
       >
