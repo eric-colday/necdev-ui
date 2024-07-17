@@ -39,7 +39,7 @@ const ProjetSection = () => {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.6 }}
-        className="flex flex-col items-center gap-3 pb-14 pl-10 "
+        className="flex flex-col items-center gap-3 pb-14 "
       >
         <motion.h2
           variants={cardVariants}

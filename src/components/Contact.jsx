@@ -54,7 +54,7 @@ const Contact = () => {
 
   return (
     <footer id="contact" className="pt-32">
-      <div className="flex flex-col items-center py-10 pl-16 ">
+      <div className="flex flex-col items-center py-10 px-4">
         <h2 className="pb-4 text-[50px] text-center font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
           Contact
         </h2>
@@ -81,13 +81,13 @@ const Contact = () => {
         >
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-[10px] text-[#7c8587] max-[1024px]:text-center "
+            className="flex flex-col gap-[10px] text-[#7c8587] "
           >
             {success ? (
               <div className="text-green-500">{success}</div>
             ) : (
               <div>
-                <div className="flex gap-4 max-[425px]:flex-col">
+                <div className="w-full flex gap-4 max-[425px]:flex-col">
                   <div>
                     <label htmlFor="">
                       Nom <span className="text-red-500 ">*</span>

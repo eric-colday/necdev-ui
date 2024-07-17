@@ -35,7 +35,7 @@ const AboutSection = () => {
       <motion.div
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true, amount: 0.6 }}
+        viewport={{ once: true, amount: 0.3 }}
         className="flex justify-center items-center h-full gap-[60px] px-40 py-60 max-[1101px]:px-4 max-[812px]:flex-col  "
       >
         <motion.img
