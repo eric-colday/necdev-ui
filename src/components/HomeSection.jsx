@@ -5,36 +5,139 @@ import React, { useContext } from "react";
 import Link from "next/link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const fadeInAnimationsVariants = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+
+const fadeInAnimationsVariants2 = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+
+const fadeInAnimationsVariants3 = {
+  initial: {
+    opacity: 0,
+    y: 10,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
 
 const HomeSection = () => {
   const { theme } = useContext(ThemeContext);
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
   return (
-    <section
+    <motion.section
+      ref={ref}
       id="accueil"
-      className="py-[5rem] "
+      className="pt-[5rem] pb-[10rem] "
       style={
         theme === "dark"
           ? { backgroundColor: "#0f172a" }
           : { backgroundColor: "#c5d3d6" }
       }
+      variants={fadeInAnimationsVariants}
+      initial="initial"
+      // animate={controls}
+      whileInView="animate"
+      viewport={{
+        once: true,
+      }}
     >
       <div className="flex flex-col items-center gap-[50px] ">
-        <div className="flex gap-[60px] justify-center items-center pt-[10rem] max-[768px]:flex-col max-[768px]:pt-[3rem] max-[768px]:gap-[40px] ">
+        <div className="flex gap-[60px] justify-center items-center px-10 max-[375px]:px-2 pt-[10rem] max-[768px]:flex-col max-[768px]:pt-[3rem] max-[768px]:gap-[40px] ">
           <img
             src="/img/nec.png"
             alt="NecDev"
             className="rounded-full w-[30%] h-[30%] animate-move max-[768px]:w-[50%] max-[768px]:h-[50%] max-[425px]:w-[70%] max-[425px]:h-[70%] "
           />
           <div className="flex flex-col justify-center max-[768px]:items-center  ">
-            <span className="text-[22px] text-[#7c8587] ">Salut, je suis </span>
-            <h2 className="text-[40px] text-white max-[425px]:text-[28px] ">
-              Eric Colday Noubissi
-            </h2>
-            <span className="text-[50px] font-extrabold text-[#7c8587] max-[768px]:text-center max-[425px]:text-[40px] ">
-              Développeur <br /> Full Stack
-            </span>
-            <div className="flex gap-[20px] "> 
+            <motion.span
+              ref={ref}
+              variants={fadeInAnimationsVariants2}
+              initial="initial"
+              // animate={controls}
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="text-[22px] text-[#7c8587] "
+            >
+              Salut, je suis{" "}
+            </motion.span>
+            <motion.h1
+              ref={ref}
+              variants={fadeInAnimationsVariants2}
+              initial="initial"
+              // animate={controls}
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="text-[40px] text-white max-[469px]:text-[28px] "
+            >
+              Eric Colday Noubissi <br />
+            </motion.h1>
+            <motion.h2
+              ref={ref}
+              variants={fadeInAnimationsVariants3}
+              initial="initial"
+              // animate={controls}
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="text-[50px] font-extrabold text-[#7c8587] max-[768px]:text-center max-[425px]:text-[40px] "
+            >
+              Consultant <br /> Webmarketing et Data
+            </motion.h2>
+            <motion.p
+              ref={ref}
+              variants={fadeInAnimationsVariants3}
+              initial="initial"
+              // animate={controls}
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              className="pb-4 text-[#7c8587] max-[768px]:px-4 max-[768px]:text-center"
+            >
+              Boostez votre visibilité en ligne avec un expert en SEO, SEA et
+              SMO.
+            </motion.p>
+            <div className="flex gap-[20px]">
               <Link
                 href="https://github.com/eric-colday"
                 target="_blank"
@@ -54,30 +157,8 @@ const HomeSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center gap-[20px] max-[375px]:flex-col ">
-          <div>Tech Stack</div>
-          <div className="max-[375px]:hidden ">| </div>
-          <div className="hidden max-[375px]:block "> _____ </div>
-          <div className="flex gap-[20px]">
-            <img
-              src="./img/icons.svg"
-              alt="logo html et css"
-              className="w-[50px] h-[50px] "
-            />
-            <img
-              src="./img/icons2.svg"
-              alt="logo html et css"
-              className="w-[50px] h-[50px] "
-            />
-            <img
-              src="./img/icons3.svg"
-              alt="logo html et css"
-              className="w-[50px] h-[50px] "
-            />
-          </div>
-        </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

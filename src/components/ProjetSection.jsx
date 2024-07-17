@@ -5,8 +5,24 @@ import React, { useContext, useState } from "react";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { ThemeContext } from "@/context/ThemeContext";
+import { motion } from "framer-motion";
 
-const Projets = () => {
+const cardVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.05,
+    },
+  },
+};
+
+const ProjetSection = () => {
   const { theme } = useContext(ThemeContext);
   const [modal, setModal] = useState(false);
 
@@ -18,23 +34,41 @@ const Projets = () => {
     <section
       id="projets"
       className="px-20 py-40 border-y-[0.5px] max-[768px]:px-5"
-      style={
-        theme === "dark"
-          ? { backgroundColor: "#0f172a" }
-          : { backgroundColor: "#F4FAFF" }
-      }
     >
-      <div className="flex flex-col gap-3 pb-14 pl-10 ">
-        <h2 className="text-[50px] font-extrabold text-[rgb(124,133,135)] max-[425px]:text-[35px]">
-          Portfolio
-        </h2>
-        <span className="text-[30px] max-[425px]:text-[20px]">
-          Chaque projet est une pièce unique de développement
-        </span>
-      </div>
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.6 }}
+        className="flex flex-col items-center gap-3 pb-14 pl-10 "
+      >
+        <motion.h2
+          variants={cardVariants}
+          className="text-[50px] text-center font-extrabold text-[rgb(124,133,135)] max-[425px]:text-[35px]"
+        >
+          Réalisations Récentes
+        </motion.h2>
+        <motion.div
+          variants={cardVariants}
+          className="mb-10 w-10 border-2 border-[#7c8587]"
+        ></motion.div>
+        <motion.span variants={cardVariants} className="text-center ">
+          Les réalisations récentes sont des créations d'application web et
+          mobile développées respectivement avec Nextjs et React Native. Ces
+          projets sont tous disponibles sur mon GitHub et vous pouvez également
+          les tester en cliquant sur le bouton "Live Demo"
+        </motion.span>
+      </motion.div>
       <div className="grid grid-cols-1 gap-16 ">
-        <div className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col ">
-          <div className="w-1/2 h-auto rounded-2xl overflow-hidden max-[768px]:w-full  ">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.6 }}
+          className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col "
+        >
+          <motion.div
+            variants={cardVariants}
+            className="w-1/2 h-auto rounded-2xl overflow-hidden max-[768px]:w-full  "
+          >
             <Link
               href="https://necstore.vercel.app/"
               target="_blank"
@@ -46,8 +80,11 @@ const Projets = () => {
                 className="w-full h-auto transform translate-y-0 transition-transform duration-[10s] ease-in-out hover:translate-y-[-77%] "
               />
             </Link>
-          </div>
-          <div className="w-1/2 h-auto max-[768px]:w-full ">
+          </motion.div>
+          <motion.div
+            variants={cardVariants}
+            className="w-1/2 h-auto max-[768px]:w-full "
+          >
             <div className="flex flex-col justify-center items-center gap-8 h-full">
               <h2 className="text-4xl font-bold text-[#7c8587]">NecStore</h2>
               <p className=" text-center text-[#7c8587] px-10 max-[768px]:px-5 max-[425px]:px-0">
@@ -82,11 +119,22 @@ const Projets = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col ">
-          <div className="w-1/2 h-auto max-[768px]:w-full ">
-            <div className="flex flex-col justify-center items-center gap-8 h-full">
+          </motion.div>
+        </motion.div>
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.6 }}
+          className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col "
+        >
+          <motion.div
+            variants={cardVariants}
+            className="w-1/2 h-auto max-[768px]:w-full "
+          >
+            <motion.div
+              variants={cardVariants}
+              className="flex flex-col justify-center items-center gap-8 h-full"
+            >
               <h2 className="text-4xl font-bold text-[#7c8587]">NecAdmin</h2>
               <p className=" text-center text-[#7c8587] px-10 max-[768px]:px-5 max-[425px]:px-0">
                 Tableau de bord permetant de gérer les utilisateurs, produits,
@@ -118,8 +166,8 @@ const Projets = () => {
                   <OpenInNewIcon className="ml-2 -mt-1 inline-block h-5 w-5 mr-1 stroke" />
                 </Link>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
           <div className="w-1/2 h-auto rounded-2xl overflow-hidden max-[768px]:w-full  ">
             <Link
               href="https://necadmin-ui.vercel.app/"
@@ -133,9 +181,17 @@ const Projets = () => {
               />
             </Link>
           </div>
-        </div>
-        <div className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col ">
-          <div className="w-1/2 h-auto rounded-2xl overflow-hidden max-[768px]:w-full  ">
+        </motion.div>
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.6 }}
+          className="flex flex-row gap-5 h-[30rem] max-[768px]:h-[40rem] p-[2rem] rounded-2xl shadow-2xl shadow-blue-950 max-[768px]:flex-col "
+        >
+          <motion.div
+            variants={cardVariants}
+            className="w-1/2 h-auto rounded-2xl overflow-hidden max-[768px]:w-full  "
+          >
             <div onClick={handleModal} className="cursor-pointer">
               <img
                 src="/img/necapp.png"
@@ -143,9 +199,13 @@ const Projets = () => {
                 className="w-full h-auto transform translate-y-0 transition-transform duration-[10s] ease-in-out hover:translate-y-[-77%] "
               />
             </div>
-          </div>
-          <div className="w-1/2 h-auto max-[768px]:w-full ">
-            <div className="flex flex-col justify-center items-center gap-8 h-full">
+          </motion.div>
+          <motion.div
+            variants={cardVariants}
+            className="w-1/2 h-auto max-[768px]:w-full "
+          >
+            <motion.div  variants={cardVariants}
+            className="flex flex-col justify-center items-center gap-8 h-full">
               <h2 className="text-4xl font-bold text-[#7c8587]">NecApp</h2>
               <p className=" text-center text-[#7c8587] px-10 max-[768px]:px-5 max-[425px]:px-0">
                 Application mobile permettant de découvrir, choisir et commander
@@ -177,7 +237,7 @@ const Projets = () => {
                   <OpenInNewIcon className="ml-2 -mt-1 inline-block h-5 w-5 mr-1 stroke" />
                 </div>
               </div>
-            </div>
+            </motion.div>
             {modal ? (
               <div className="fixed top-0 max-[768px]:top-[-40px] left-0 w-full h-full max-[768px]:h-[50rem] bg-black bg-opacity-70 z-50 flex justify-center items-center">
                 <div className="w-1/2 h-1/2 max-[768px]:h-[35rem] max-[515px]:w-[90%] bg-white p-2 rounded-2xl">
@@ -230,11 +290,16 @@ const Projets = () => {
                 </div>
               </div>
             ) : null}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
+      <Link href="/projets" className="flex justify-center items-center mt-14">
+        <button className="w-48 h-16 cursor-pointer border border-[#7c8587] hover:border-2 transition-all duration-300 ease-in-out">
+          Voir tous les projets
+        </button>
+      </Link>
     </section>
   );
 };
 
-export default Projets;
+export default ProjetSection;
