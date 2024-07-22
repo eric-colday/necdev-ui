@@ -134,8 +134,8 @@ const HomeSection = () => {
               }}
               className="pb-4 text-[#7c8587] max-[768px]:px-4 max-[768px]:text-center"
             >
-              Boostez votre visibilité en ligne avec un expert en SEO, SEA et
-              SMO.
+              Boostez votre visibilité en ligne avec un expert SEO, SEA et
+              Analytics.
             </motion.p>
             <div className="flex gap-[20px]">
               <Link

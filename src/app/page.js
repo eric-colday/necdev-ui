@@ -2,7 +2,7 @@ import React from "react";
 import HomeSection from "@/components/HomeSection";
 import AboutSection from "@/components/AboutSection";
 import ProjetSection from "@/components/ProjetSection";
-import Contact from "@/components/Contact";
+import ContactSection from "@/components/ContactSection";
 import ServiceSection from "@/components/ServiceSection";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <ServiceSection/>
       <AboutSection/>
       <ProjetSection/>
-      <Contact/>
+      <ContactSection/>
     </main>
   );
 }

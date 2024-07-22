@@ -8,8 +8,24 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { ThemeContext } from "@/context/ThemeContext";
+import { motion } from "framer-motion";
 
-const Contact = () => {
+const cardVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.05,
+    },
+  },
+};
+
+const ContactSection = () => {
   const { theme } = useContext(ThemeContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -54,16 +70,24 @@ const Contact = () => {
 
   return (
     <footer id="contact" className="pt-32">
-      <div className="flex flex-col items-center py-10 px-4">
-        <h2 className="pb-4 text-[50px] text-center font-extrabold text-[#7c8587] max-[425px]:text-[35px]">
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.6 }}
+        className="flex flex-col items-center py-10 px-4"
+      >
+        <motion.h2
+          variants={cardVariants}
+          className="pb-4 text-[50px] text-center font-extrabold text-[#7c8587] max-[425px]:text-[35px]"
+        >
           Contact
-        </h2>
-        <div className="mb-10 w-10 border-2 border-[#7c8587]"></div>
-        <p className="text-center">
+        </motion.h2>
+        <motion.div variants={cardVariants} className="mb-10 w-10 border-2 border-[#7c8587]"></motion.div>
+        <motion.p variants={cardVariants} className="text-center">
           N'hésitez pas à me contacter pour toute question ou proposition de
           collaboration
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
       <div className="flex justify-center items-center gap-[70px] px-20 pb-40  max-[1024px]:flex-col max-[1024px]:px-10 ">
         <div>
           <Lottie
@@ -161,7 +185,11 @@ const Contact = () => {
       </div>
       <div className="flex justify-around gap-[20px] p-5 border-t ">
         <div className=" flex gap-[10px] max-[412px]:flex-col max-[412px]:items-center max-[412px]:text-center">
-          <div>© Copyright 2024, Eric Colday Noubissi</div>
+          <div>
+            {" "}
+            &copy;&nbsp; Tous droits réservés {new Date().getFullYear()} , Eric
+            Colday Noubissi
+          </div>
           <ul className="flex gap-[10px]">
             <li>
               <Link
@@ -188,4 +216,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactSection;
