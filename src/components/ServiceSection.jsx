@@ -4,6 +4,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
+import LanguageIcon from "@mui/icons-material/Language";
+import FindInPageIcon from "@mui/icons-material/FindInPage";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import QueryStatsIcon from "@mui/icons-material/QueryStats";
 
 const cardVariants = {
   initial: {
@@ -26,9 +30,7 @@ function ServiceSection() {
       <motion.div
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true, 
-        amount: 0.4
-        }}
+        viewport={{ once: true, amount: 0.4 }}
         className=" h-full px-10 py-36 "
       >
         <motion.div
@@ -43,16 +45,9 @@ function ServiceSection() {
         <div className="grid grid-cols-4 gap-4 max-[871px]:grid-cols-2 max-[468px]:grid-cols-1 ">
           <motion.div
             variants={cardVariants}
-            className="flex flex-col items-center gap-2"
+            className="flex flex-col items-center gap-4"
           >
-            <Image
-              src="/img/site-nec.jpg"
-              alt="SEO"
-              width={100}
-              height={100}
-              className="rounded-full border border-white "
-            />
-
+            <LanguageIcon style={{ fontSize: 50 }} color="primary"/>
             <h3 className="font-bold text-2xl text-[#7c8587]">
               Création de site
             </h3>
@@ -63,15 +58,9 @@ function ServiceSection() {
           </motion.div>
           <motion.div
             variants={cardVariants}
-            className="flex flex-col items-center gap-2"
+            className="flex flex-col items-center gap-4"
           >
-            <Image
-              src="/img/seo-nec.jpg"
-              alt="SEO"
-              width={100}
-              height={100}
-              className="rounded-full border border-white"
-            />
+            <FindInPageIcon style={{ fontSize: 50 }} color="primary"/>
             <h3 className="font-bold text-2xl text-[#7c8587] ">SEO</h3>
             <p className="text-center px-2 text-[#7c8587]">
               Améliorez la visibilité de votre site Web sur les moteurs de
@@ -80,15 +69,9 @@ function ServiceSection() {
           </motion.div>
           <motion.div
             variants={cardVariants}
-            className="flex flex-col items-center gap-2"
+            className="flex flex-col items-center gap-4"
           >
-            <Image
-              src="/img/sea-nec.jpg"
-              alt="SEA"
-              width={100}
-              height={100}
-              className="rounded-full border border-white"
-            />
+            <CampaignIcon style={{ fontSize: 50 }} color="primary"/>
             <h3 className="font-bold text-2xl text-[#7c8587]">SEA</h3>
             <p className="text-center px-2 text-[#7c8587]">
               Optimisez vos campagnes publicitaires payantes pour un meilleur
@@ -97,15 +80,9 @@ function ServiceSection() {
           </motion.div>
           <motion.div
             variants={cardVariants}
-            className="flex flex-col items-center gap-2"
+            className="flex flex-col items-center gap-4"
           >
-            <Image
-              src="/img/smo-nec.jpg"
-              alt="SEO"
-              width={100}
-              height={100}
-              className="rounded-full border border-white"
-            />
+            <QueryStatsIcon style={{ fontSize: 50 }} color="primary" />
             <h3 className="font-bold text-2xl text-[#7c8587]">Analytics</h3>
             <p className="text-center px-2 text-[#7c8587]">
               Suivez et analysez les performances de votre site Web pour

@@ -40,9 +40,9 @@ const AboutSection = () => {
       >
         <motion.img
           variants={cardVariants}
-          src="/img/ericcoldaynoubissi-Nec.jpg"
+          src="/img/Photo de profil de face - eric colday noubissi.jpg"
           alt="Photo de profil de Nec"
-          className="w-[400px] h-[400px] object-cover animate-move "
+          className="w-96 object-cover animate-move "
         />
         <motion.div
           variants={cardVariants}
@@ -51,7 +51,7 @@ const AboutSection = () => {
           <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[812px]:text-center max-[425px]:text-[35px]  ">
             Pourquoi Me Choisir ?
           </h2>
-          <p className="text-[#7c8587] max-[812px]:text-center ">
+          <p className="text-[#7c8587] max-[812px]:text-center">
             Avec plusieurs années d'expérience dans le domaine du webmarketing,
             je vous propose des solutions personnalisées et adaptées à vos
             besoins.
@@ -60,17 +60,12 @@ const AboutSection = () => {
             Mon objectif est de vous aider à atteindre vos objectifs en ligne
             grâce à des stratégies efficaces et mesurables.
           </p>
-          <p className="text-[#7c8587] max-[812px]:text-center">
-            Expertise confirmée en SEO, SEA, Analytics et développement web ||
-            Approche centrée sur les résultats || Suivi personnalisé et
-            accompagnement continu.
-          </p>
           <Link
             href="/a-propos"
             className="mt-5 max-[812px]:flex justify-center items-center "
           >
             <button className="w-56 h-16 cursor-pointer border border-[#7c8587] hover:border-2 transition-all duration-300 ease-in-out">
-              Découvrir mon parcours
+              Lire plus
             </button>
           </Link>
         </motion.div>
