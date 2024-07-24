@@ -7,6 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { animated, useSpring } from "react-spring";
 
 const fadeInAnimationsVariants = {
   initial: {
@@ -52,6 +53,20 @@ const fadeInAnimationsVariants3 = {
     },
   },
 };
+
+function Number({ n }) {
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: n,
+    delay: 100,
+    config: { mass: 1, tension: 20, friction: 10 },
+  });
+  return (
+    <animated.div className="text-7xl max-[477px]:text-5xl  text-[#468bff] font-bold ">
+      {number.to((n) => n.toFixed(0))}
+    </animated.div>
+  );
+}
 
 const HomeSection = () => {
   const { theme } = useContext(ThemeContext);
@@ -155,7 +170,23 @@ const HomeSection = () => {
                 <LinkedInIcon className="text-[#2f3854] cursor-pointer hover:text-[#7c8587] " />
               </Link>
             </div>
+            <Link
+              href="/qui-suis-je"
+              className="mt-8 max-[812px]:flex justify-center items-center "
+            >
+              <button className="w-56 h-16 cursor-pointer border border-[#7c8587] hover:border-2 transition-all duration-300 ease-in-out">
+                Qui suis-je ?
+              </button>
+            </Link>
           </div>
+        </div>
+      </div>
+      <div className="mt-16 flex max-[477px]:flex-col justify-center items-center gap-10 ">
+        <div className="flex justify-center items-center gap-2 ">
+          <Number n={9} /> ans d'expérience
+        </div>
+        <div className="flex justify-center items-center gap-2 ">
+          <Number n={50} /> projets réalisés
         </div>
       </div>
     </motion.section>

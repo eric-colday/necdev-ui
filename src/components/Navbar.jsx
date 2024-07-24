@@ -10,8 +10,8 @@ import ThemeToggle from "./themeToggle/ThemeToggle";
 const links = [
   {
     id: 1,
-    title: "A propos",
-    url: "/a-propos",
+    title: "Qui suis-je ?",
+    url: "/qui-suis-je",
   },
   {
     id: 2,
