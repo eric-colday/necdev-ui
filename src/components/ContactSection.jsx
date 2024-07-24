@@ -82,10 +82,14 @@ const ContactSection = () => {
         >
           Contact
         </motion.h2>
-        <motion.div variants={cardVariants} className="mb-10 w-10 border-2 border-[#7c8587]"></motion.div>
+        <motion.div
+          variants={cardVariants}
+          className="mb-10 w-10 border-2 border-[#7c8587]"
+        ></motion.div>
         <motion.p variants={cardVariants} className="text-center">
-          N'hésitez pas à me contacter pour toute question ou proposition de
-          collaboration
+          Prêt à discuter de votre projet ? Contactez-moi dès aujourd'hui pour
+          découvrir comment je peux vous aider à atteindre vos objectifs en
+          ligne.
         </motion.p>
       </motion.div>
       <div className="flex justify-center items-center gap-[70px] px-20 pb-40  max-[1024px]:flex-col max-[1024px]:px-10 ">

@@ -10,7 +10,6 @@ export default function Home() {
     <main>
       <HomeSection />
       <ServiceSection/>
-      <AboutSection/>
       <ProjetSection/>
       <ContactSection/>
     </main>
