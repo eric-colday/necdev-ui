@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { animated, useSpring } from "react-spring";
 
 const cardVariants = {
   initial: {
@@ -15,7 +17,52 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 1,
-      delay: 0.05,
+      delay: 0.5,
+    },
+  },
+};
+
+const fadeInAnimationsVariants = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+
+const fadeInAnimationsVariants2 = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+
+const fadeInAnimationsVariants3 = {
+  initial: {
+    opacity: 0,
+    y: 10,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
     },
   },
 };
@@ -24,26 +71,27 @@ const AboutSection = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section id="apropos">
+    <motion.section id="apropos">
       <motion.div
+        variants={fadeInAnimationsVariants}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
         style={
           theme === "dark"
             ? { backgroundColor: "#0f172a" }
-            : { backgroundColor: "#F4FAFF" }
+            : { backgroundColor: "#c5d3d6" }
         }
         className="flex justify-center items-center h-full gap-[60px] px-40 py-60  max-[1101px]:px-4 max-[812px]:flex-col  "
       >
         <motion.img
-          variants={cardVariants}
+          variants={fadeInAnimationsVariants2}
           src="/img/Photo de profil de face - eric colday noubissi.jpg"
           alt="Photo de profil de Nec"
           className="w-96 object-cover animate-move "
         />
         <motion.div
-          variants={cardVariants}
+          variants={fadeInAnimationsVariants2}
           className="flex flex-col justify-center gap-[10px] "
         >
           <h1 className="text-[50px] font-extrabold text-[#7c8587] max-[812px]:text-center max-[425px]:text-[35px]  ">
@@ -67,11 +115,24 @@ const AboutSection = () => {
             perfectionner mes compétences et de développer des stratégies
             adaptées aux besoins spécifiques de mes clients.
           </p>
+          <Link
+            href="/contact"
+            className="mt-8 max-[812px]:flex justify-center items-center "
+          >
+            <button className="w-56 h-16 cursor-pointer border border-[#7c8587] hover:border-2 transition-all duration-300 ease-in-out">
+              Auditer mon site
+            </button>
+          </Link>
         </motion.div>
       </motion.div>
       <div>
-        <div className="text-center py-48 ">
-          <h2>Ma Philosophie</h2>
+        <div className="text-center py-40 px-20 ">
+          <div className="flex flex-col items-center">
+            <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px] ">
+              Ma Philosophie
+            </h2>
+            <div className="mb-10 w-10 border-2 border-[#7c8587]"></div>
+          </div>
           <p>
             Mon approche est centrée sur les résultats et la satisfaction de mes
             clients. Je crois en une collaboration étroite et transparente, où
@@ -81,27 +142,65 @@ const AboutSection = () => {
             solutions efficaces et mesurables.
           </p>
 
-          <h2>Quelques Chiffres Clés</h2>
-          <ul>
-            <li>
-              <strong>8 années</strong> d'expérience en webmarketing et data.
-            </li>
-            <li>
-              <strong>50+</strong> projets réussis, couvrant divers secteurs
-              d'activité.
-            </li>
-            <li>
-              <strong>15%</strong> de croissance annuelle moyenne du trafic
-              organique pour mes clients.
-            </li>
-            <li>
-              <strong>20%</strong> de réduction des coûts par clic (CPC) grâce à
-              l'optimisation des campagnes SEA.
-            </li>
-          </ul>
+          <div className="grid grid-cols-4 max-[966px]:grid-cols-2 max-[566px]:grid-cols-1  gap-4  mt-10 ">
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.div
+                variants={fadeInAnimationsVariants}
+                className="text-7xl max-[477px]:text-5xl  text-[#468bff] font-bold "
+              >
+                9
+              </motion.div>
+              Années d'expérience en webmarketing et data.
+            </motion.div>
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.div
+                variants={fadeInAnimationsVariants}
+                className="text-7xl max-[477px]:text-5xl  text-[#468bff] font-bold "
+              >
+                + 50
+              </motion.div>
+              Projets réussis, couvrant divers secteurs d'activité.
+            </motion.div>
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.div
+                variants={fadeInAnimationsVariants}
+                className="text-7xl max-[477px]:text-5xl  text-[#468bff] font-bold "
+              >
+                15 %
+              </motion.div>
+              De croissance annuelle moyenne du trafic organique pour mes
+              clients.
+            </motion.div>
+            <motion.div
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.div
+                variants={fadeInAnimationsVariants}
+                className="text-7xl max-[477px]:text-5xl  text-[#468bff] font-bold "
+              >
+                20%
+              </motion.div>
+              De réduction des coûts par clic (CPC) grâce à l'optimisation des
+              campagnes SEA.
+            </motion.div>
+          </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
