@@ -33,7 +33,12 @@ const ProjetSection = () => {
   return (
     <section
       id="projets"
-      className="px-20 py-40 border-y-[0.5px] max-[768px]:px-5"
+      className="px-20 py-40 max-[768px]:px-5"
+      style={
+          theme === "dark"
+            ? { backgroundColor: "#0f172a" }
+            : { backgroundColor: "#F4FAFF" }
+        }
     >
       <motion.div
         initial="initial"

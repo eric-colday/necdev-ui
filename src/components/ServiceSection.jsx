@@ -26,7 +26,7 @@ const cardVariants = {
 
 function ServiceSection() {
   return (
-    <section className="border-y-[0.5px]">
+    <section>
       <motion.div
         initial="initial"
         whileInView="animate"
