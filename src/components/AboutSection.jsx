@@ -24,19 +24,17 @@ const AboutSection = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section
-      id="apropos"
-      style={
-        theme === "dark"
-          ? { backgroundColor: "#0f172a" }
-          : { backgroundColor: "#F4FAFF" }
-      }
-    >
+    <section id="apropos">
       <motion.div
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.3 }}
-        className="flex justify-center items-center h-full gap-[60px] px-40 py-60 max-[1101px]:px-4 max-[812px]:flex-col  "
+        style={
+          theme === "dark"
+            ? { backgroundColor: "#0f172a" }
+            : { backgroundColor: "#F4FAFF" }
+        }
+        className="flex justify-center items-center h-full gap-[60px] px-40 py-60  max-[1101px]:px-4 max-[812px]:flex-col  "
       >
         <motion.img
           variants={cardVariants}
@@ -51,14 +49,16 @@ const AboutSection = () => {
           <h1 className="text-[50px] font-extrabold text-[#7c8587] max-[812px]:text-center max-[425px]:text-[35px]  ">
             Qui suis je ?
           </h1>
+          <p className="text-[#7c8587] max-[812px]:text-center">Bonjour</p>
           <p className="text-[#7c8587] max-[812px]:text-center">
-            Bonjour ! 👋🏾😃 <br />
-            Je suis<strong> Eric Colday NOUBISSI </strong>, Consultant
-            Webmarketing et Data en freelance depuis 2016. Fort de mon
-            expérience et de mon expertise, je suis déterminé à transformer vos
-            ambitions digitales en réussites concrètes.
+            Je suis<strong> Eric Colday NOUBISSI </strong>,{" "}
+            <strong>Consultant Webmarketing et Data</strong> freelance depuis
+            2016. Fort de mon expérience et de mon expertise, je suis déterminé
+            à transformer vos ambitions digitales en réussites concrètes.
           </p>
-          <h2>Mon Parcours Professionnel</h2>
+          <h2 className="text-[20px] font-extrabold text-[#7c8587] max-[812px]:text-center">
+            Mon Parcours Professionnel
+          </h2>
           <p className="text-[#7c8587] max-[812px]:text-center">
             Depuis 2016, j'ai eu l'opportunité de gérer et d'optimiser près de
             50 projets pour diverses entreprises, allant de la création de sites
@@ -67,36 +67,10 @@ const AboutSection = () => {
             perfectionner mes compétences et de développer des stratégies
             adaptées aux besoins spécifiques de mes clients.
           </p>
-
-          <h2>Mon Expertise</h2>
-          <p>
-            En tant que consultant webmarketing et data, mon expertise couvre
-            plusieurs domaines clés :
-          </p>
-          <ul>
-            <li>
-              <strong>SEO (Search Engine Optimization) :</strong> Amélioration
-              du classement et de la visibilité des sites web sur les moteurs de
-              recherche, augmentant ainsi le trafic organique.
-            </li>
-            <li>
-              <strong>SEA (Search Engine Advertising) :</strong> Création et
-              gestion de campagnes publicitaires payantes pour maximiser le
-              retour sur investissement.
-            </li>
-            <li>
-              <strong>SMO (Social Media Optimization) :</strong> Optimisation de
-              la présence sur les réseaux sociaux pour engager et développer une
-              audience fidèle.
-            </li>
-            <li>
-              <strong>Développement Web :</strong> Conception et création de
-              sites internet et d'applications web utilisant des technologies
-              telles que WordPress et React/Next.js, garantissant des solutions
-              sur mesure et performantes.
-            </li>
-          </ul>
-
+        </motion.div>
+      </motion.div>
+      <div>
+        <div className="text-center py-48 ">
           <h2>Ma Philosophie</h2>
           <p>
             Mon approche est centrée sur les résultats et la satisfaction de mes
@@ -125,43 +99,8 @@ const AboutSection = () => {
               l'optimisation des campagnes SEA.
             </li>
           </ul>
-
-          <h2>Témoignages</h2>
-          <p>Voici ce que disent certains de mes clients :</p>
-          <div class="testimonial">
-            <blockquote>
-              "Eric a su transformer notre présence en ligne. Ses stratégies SEO
-              ont doublé notre trafic en seulement six mois."
-            </blockquote>
-            <cite>- Client X, Directeur Marketing de Société A</cite>
-          </div>
-          <div class="testimonial">
-            <blockquote>
-              "Le site web développé par Eric répond parfaitement à nos besoins
-              et a considérablement amélioré notre conversion."
-            </blockquote>
-            <cite>- Client Y, PDG de Société B</cite>
-          </div>
-          <a href="/realisations" class="cta-button">
-            Voir plus de témoignages
-          </a>
-
-          <p className="text-[#7c8587] max-[812px]:text-center">
-            Mon objectif est de vous aider à atteindre vos objectifs en ligne
-            grâce à des stratégies efficaces et mesurables.
-          </p>
-
-          <h2>Contactez-moi</h2>
-          <p>
-            Prêt à discuter de votre projet ? Contactez-moi dès aujourd'hui pour
-            découvrir comment je peux vous aider à atteindre vos objectifs en
-            ligne.
-          </p>
-          <a href="/contact" class="cta-button">
-            Me contacter
-          </a>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </section>
   );
 };
