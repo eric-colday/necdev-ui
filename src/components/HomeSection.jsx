@@ -183,10 +183,10 @@ const HomeSection = () => {
       </div>
       <div className="mt-16 flex max-[477px]:flex-col justify-center items-center gap-10 ">
         <div className="flex justify-center items-center gap-2 ">
-          <Number n={9} /> ans d'expérience
+          <Number n={9} /> années d'expérience
         </div>
         <div className="flex justify-center items-center gap-2 ">
-          <Number n={50} /> projets réalisés
+          <Number n={50} /> projets réussis
         </div>
       </div>
     </motion.section>
