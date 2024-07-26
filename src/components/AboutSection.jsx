@@ -25,7 +25,7 @@ const cardVariants = {
 const fadeInAnimationsVariants = {
   initial: {
     opacity: 0,
-    y: 50,
+    y: 10,
   },
   animate: {
     opacity: 1,
@@ -126,7 +126,7 @@ const AboutSection = () => {
         </motion.div>
       </motion.div>
       <div>
-        <div className="text-center py-40 px-20 ">
+        <div className="text-center py-40 px-20 max-[830px]:px-4">
           <div className="flex flex-col items-center">
             <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px] ">
               Ma Philosophie
@@ -194,7 +194,7 @@ const AboutSection = () => {
               >
                 20%
               </motion.div>
-              De réduction des coûts par clic (CPC) grâce à l'optimisation des
+              De réduction des coûts par clic grâce à l'optimisation des
               campagnes SEA.
             </motion.div>
           </div>
