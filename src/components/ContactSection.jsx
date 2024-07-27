@@ -69,7 +69,7 @@ const ContactSection = () => {
   };
 
   return (
-    <footer id="contact" className="pt-32">
+    <footer id="contact" className="pt-32 bg-[#0f172a] ">
       <motion.div
         initial="initial"
         whileInView="animate"
@@ -103,7 +103,7 @@ const ContactSection = () => {
           style={
             theme === "dark"
               ? { backgroundColor: "#0f172a" }
-              : { backgroundColor: "#c5d3d6" }
+              : { backgroundColor: "#0f172a" }
           }
           className="flex flex-col justify-center items-center rounded-md w-1/2 p-10 shadow-xl  max-[1024px]:w-full  "
         >

@@ -5,8 +5,6 @@ import { ThemeContext } from "@/context/ThemeContext";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-
-
 const fadeInAnimationsVariants = {
   initial: {
     opacity: 0,
@@ -37,7 +35,6 @@ const fadeInAnimationsVariants2 = {
   },
 };
 
-
 const AboutSection = () => {
   const { theme } = useContext(ThemeContext);
 
@@ -51,7 +48,7 @@ const AboutSection = () => {
         style={
           theme === "dark"
             ? { backgroundColor: "#0f172a" }
-            : { backgroundColor: "#c5d3d6" }
+            : { backgroundColor: "#0f172a" }
         }
         className="flex justify-center items-center h-full gap-[60px] px-40 py-60  max-[1101px]:px-4 max-[812px]:flex-col  "
       >
@@ -86,14 +83,6 @@ const AboutSection = () => {
             perfectionner mes compétences et de développer des stratégies
             adaptées aux besoins spécifiques de mes clients.
           </p>
-          <Link
-            href="/contact"
-            className="mt-8 max-[812px]:flex justify-center items-center "
-          >
-            <button className="w-56 h-16 cursor-pointer border border-[#7c8587] hover:border-2 transition-all duration-300 ease-in-out">
-              Auditer mon site
-            </button>
-          </Link>
         </motion.div>
       </motion.div>
       <div>
@@ -112,8 +101,7 @@ const AboutSection = () => {
             aider à atteindre et à dépasser vos objectifs en ligne grâce à des
             solutions efficaces et mesurables.
           </p>
-
-          <div className="grid grid-cols-4 max-[966px]:grid-cols-2 max-[566px]:grid-cols-1  gap-4  mt-10 ">
+          <div className="my-24  grid grid-cols-4 max-[966px]:grid-cols-2 max-[566px]:grid-cols-1  gap-4 ">
             <motion.div
               initial="initial"
               whileInView="animate"
@@ -169,6 +157,14 @@ const AboutSection = () => {
               campagnes SEA.
             </motion.div>
           </div>
+          <Link
+            href="/contact"
+            className="mt-8 max-[812px]:flex justify-center items-center "
+          >
+            <button className="w-56 h-16 cursor-pointer border border-[#7c8587] hover:border-2 transition-all duration-300 ease-in-out">
+              Auditer mon site
+            </button>
+          </Link>
         </div>
       </div>
     </motion.section>
