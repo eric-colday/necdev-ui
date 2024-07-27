@@ -116,6 +116,45 @@ const Navbar = () => {
               {link.title}
             </Link>
           ))}
+          {/* <Link
+            href="/qui-suis-je"
+            className={
+              showLinks
+                ? "text-[28px] max-[768px]:text-[28px]"
+                : "styles.hiddenLink"
+            }
+            onClick={
+              showLinks
+                ? () => {
+                    setShowLinks(false);
+                  }
+                : null
+            }
+          >
+            Qui suis-je ?
+          </Link> */}
+          <Link
+            href={"/services"}
+            className={
+              showLinks
+                ? "text-[28px] max-[768px]:text-[28px]"
+                : "styles.hiddenLink"
+            }
+            onClick={
+              showLinks
+                ? () => {
+                    setShowLinks(false);
+                  }
+                : null
+            }
+          >
+            Services
+          </Link>
+          <div>
+            <Link 
+            href={"/seo"}
+            >Seo</Link>
+          </div>
         </div>
         <ThemeToggle />
       </div>
