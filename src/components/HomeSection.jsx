@@ -81,7 +81,7 @@ const HomeSection = () => {
       style={
         theme === "dark"
           ? { backgroundColor: "#0f172a" }
-          : { backgroundColor: "#c5d3d6" }
+          : { backgroundColor: "#0f172a" }
       }
       variants={fadeInAnimationsVariants}
       initial="initial"

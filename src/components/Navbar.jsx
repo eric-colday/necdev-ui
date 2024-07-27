@@ -16,7 +16,7 @@ const links = [
   {
     id: 2,
     title: "Services",
-    url: "/",
+    url: "/services",
   },
   {
     id: 3,
@@ -25,11 +25,6 @@ const links = [
   },
   {
     id: 4,
-    title: "Blog",
-    url: "/",
-  },
-  {
-    id: 5,
     title: "Contact",
     url: "/",
   },
@@ -132,7 +127,7 @@ const Navbar = () => {
             }
           >
             Qui suis-je ?
-          </Link> */}
+          </Link>
           <Link
             href={"/services"}
             className={
@@ -154,7 +149,7 @@ const Navbar = () => {
             <Link 
             href={"/seo"}
             >Seo</Link>
-          </div>
+          </div> */}
         </div>
         <ThemeToggle />
       </div>
