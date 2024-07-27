@@ -4,23 +4,8 @@ import React, { useContext } from "react";
 import { ThemeContext } from "@/context/ThemeContext";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { animated, useSpring } from "react-spring";
 
-const cardVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      delay: 0.5,
-    },
-  },
-};
+
 
 const fadeInAnimationsVariants = {
   initial: {
@@ -52,20 +37,6 @@ const fadeInAnimationsVariants2 = {
   },
 };
 
-const fadeInAnimationsVariants3 = {
-  initial: {
-    opacity: 0,
-    y: 10,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      delay: 0.5,
-    },
-  },
-};
 
 const AboutSection = () => {
   const { theme } = useContext(ThemeContext);
@@ -192,7 +163,7 @@ const AboutSection = () => {
                 variants={fadeInAnimationsVariants}
                 className="text-7xl max-[477px]:text-5xl  text-[#468bff] font-bold "
               >
-                20%
+                20 %
               </motion.div>
               De réduction des coûts par clic grâce à l'optimisation des
               campagnes SEA.
