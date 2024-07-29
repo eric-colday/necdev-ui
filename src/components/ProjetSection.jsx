@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const cardVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: 20,
   },
   animate: {
     opacity: 1,

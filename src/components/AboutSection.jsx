@@ -39,7 +39,7 @@ const AboutSection = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <motion.section id="apropos">
+    <motion.section id="apropos" >
       <motion.div
         variants={fadeInAnimationsVariants}
         initial="initial"
