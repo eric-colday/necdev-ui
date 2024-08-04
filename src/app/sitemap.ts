@@ -6,5 +6,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             url: `${process.env.NEXT_PUBLIC_SITE_URL}/`,
             lastModified: new Date().toISOString(),
         },
+        {
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/qui-suis-je`,
+            lastModified: new Date().toISOString(),
+        },
+        {
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/services`,
+            lastModified: new Date().toISOString(),
+        },
     ]
 }
