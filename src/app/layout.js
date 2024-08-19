@@ -1,6 +1,7 @@
 // import Navbar from "@/components/Navbar";
 
 import { GoogleTagManager } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import { Inter, Poppins } from "next/font/google";
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <GoogleTagManager gtmId="GTM-XYZ" />
+      <SpeedInsights />
       <body className={inter.className}>
         <ThemeContextProvider>
           <ThemeProvider>
