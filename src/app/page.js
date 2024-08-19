@@ -1,17 +1,26 @@
 import React from "react";
-import HomeSection from "@/components/HomeSection";
-import AboutSection from "@/components/AboutSection";
-import ProjetSection from "@/components/ProjetSection";
-import ContactSection from "@/components/ContactSection";
-import ServiceSection from "@/components/ServiceSection";
+import { SliceZone } from "@prismicio/react";
 
-export default function Home() {
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+
+export default async function Home() {
+  const client = createClient();
+  const page = await client.getSingle("homepage");
+
   return (
     <main>
-      <HomeSection />
-      <ServiceSection/>
-      <ProjetSection/>
-      <ContactSection/>
+      <SliceZone slices={page.data.slices} components={components} />
     </main>
   );
+}
+
+export async function generateMetadata() {
+  const client = createClient();
+  const page = await client.getSingle("homepage");
+
+  return {
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+  };
 }

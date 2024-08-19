@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import LanguageIcon from "@mui/icons-material/Language";

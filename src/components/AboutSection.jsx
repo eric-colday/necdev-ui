@@ -72,9 +72,9 @@ const AboutSection = () => {
             2016. Fort de mon expérience et de mon expertise, je suis déterminé
             à transformer vos ambitions digitales en réussites concrètes.
           </p>
-          <h2 className="text-[20px] font-extrabold text-[#7c8587] max-[812px]:text-center">
+          <h3 className="text-[20px] font-extrabold text-[#7c8587] max-[812px]:text-center">
             Mon Parcours Professionnel
-          </h2>
+          </h3>
           <p className="text-[#7c8587] max-[812px]:text-center">
             Depuis 2016, j'ai eu l'opportunité de gérer et d'optimiser près de
             50 projets pour diverses entreprises, allant de la création de sites
