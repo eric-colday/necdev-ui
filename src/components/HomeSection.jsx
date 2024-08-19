@@ -134,7 +134,7 @@ const HomeSection = () => {
               viewport={{
                 once: true,
               }}
-              className="text-[50px] font-extrabold text-[#7c8587] max-[768px]:text-center max-[425px]:text-[40px] "
+              className="text-3xl font-extrabold text-[#7c8587] max-[768px]:text-center max-[425px]:text-[40px] "
             >
               Consultant <br /> Webmarketing et Data
             </motion.h2>
