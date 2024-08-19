@@ -153,7 +153,7 @@ const HomeSection = ({ slice }: HomeSectionProps): JSX.Element => {
                   viewport={{
                     once: true,
                   }}
-                  className="text-[45px] font-bold text-[#468bff] max-[768px]:text-center max-[425px]:text-[40px] "
+                  className="text-[40px] font-bold text-[#468bff] max-[768px]:text-center max-[425px]:text-[40px] "
                 >
                   {children}
                 </motion.h2>,
