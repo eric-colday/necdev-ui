@@ -80,7 +80,7 @@ export const CategoriesProjects = [
 export const Projects = [
   {
     id: 1,
-    image: "/home/2.jpg",
+    image: "/home/deepomatic - Eric Colday Noubissi.jpg",
     title: "Deepomatic",
     description:
       "Référencement naturel",
@@ -92,7 +92,7 @@ export const Projects = [
   },
   {
     id: 2,
-    image: "/home/1.jpg",
+    image: "/home/Cotillons D'Alsace - Eric Colday Noubissi.jpg",
     title: "Cotillons d'Alsace",
     description:
       "Google Ads",
@@ -103,7 +103,7 @@ export const Projects = [
   },
   {
     id: 3,
-    image: "/home/4.jpg",
+    image: "/home/Mino Du Sud - Eric Colday Noubissi.jpg",
     title: "Mino Du Sud",
     description:
       "Suivi des performances",
@@ -115,7 +115,7 @@ export const Projects = [
   },
   {
     id: 4,
-    image: "/home/3.jpg",
+    image: "/home/Epis - Eric Colday Noubissi.jpg",
     title: "EPIS",
     description:
       "Sites web (WordPress)",
@@ -127,7 +127,7 @@ export const Projects = [
   },
   {
     id: 5,
-    image: "/home/2.jpg",
+    image: "/home/KS Tools - Eric Colday Noubissi.jpg",
     title: "KS Tools",
     description:
       "Référencement naturel",
@@ -139,7 +139,7 @@ export const Projects = [
   },
   {
     id: 6,
-    image: "/home/1.jpg",
+    image: "/home/Fortwenger - Eric Colday Noubissi.jpg",
     title: "Fortwenger",
     description:
       "Facebook/Instagram Ads",
@@ -150,7 +150,7 @@ export const Projects = [
   },
   {
     id: 7,
-    image: "/home/4.jpg",
+    image: "/home/PnrBV - Eric Colday Noubissi.jpg",
     title: "PnrBV",
     description:
       "Suivi des performances",
