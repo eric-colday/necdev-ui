@@ -1,6 +1,6 @@
 // import Navbar from "@/components/Navbar";
 
-import { GoogleTagManager } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeContextProvider } from "@/context/ThemeContext";
@@ -38,7 +38,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <GoogleTagManager gtmId="GTM-XYZ" />
+      {/* <GoogleTagManager gtmId="GTM-XYZ" /> */}
       <SpeedInsights />
       <Analytics/>
       <body className={inter.className}>
