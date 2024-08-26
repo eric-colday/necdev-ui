@@ -29,7 +29,7 @@ const MobileMenu = ({ settings }) => {
         />
       </div>
       {isOpen && (
-        <div className="absolute left-0 top-20 w-full h-[calc(100vh-9px)] bg-[#0f172a] flex flex-col items-center justify-center gap-8 font-medium text-xl z-10">
+        <div className="absolute left-0 top-20 w-full h-[calc(94vh-26px)] bg-[#0f172a] flex flex-col items-center justify-center gap-8 font-medium text-xl z-10">
           {settings.data.navigation.map(({ link, label }) => (
             <div
               key={label}
