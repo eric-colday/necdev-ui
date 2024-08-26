@@ -162,7 +162,7 @@ export const Projects = [
   },
   {
     id: 8,
-    image: "/home/3.jpg",
+    image: "/home/Nec Store - Eric Colday Noubissi.jpg",
     title: "Nec Store",
     description:
       "Application Web (Nextjs)",
@@ -174,7 +174,7 @@ export const Projects = [
   },
   {
     id: 9,
-    image: "/home/2.jpg",
+    image: "/home/Nec Admin - Eric Colday Noubissi.jpg",
     title: "Nec Admin",
     description:
       "Application Web (Nextjs)",
@@ -186,7 +186,7 @@ export const Projects = [
   },
   {
     id: 10,
-    image: "/home/1.jpg",
+    image: "/home/Athéo ingéniérie - Eric Colday Noubissi.jpg",
     title: "Athéo ingénierie",
     description:
       "LinkedIn Ads",
@@ -197,7 +197,7 @@ export const Projects = [
   },
   {
     id: 11,
-    image: "/home/4.jpg",
+    image: "/home/Nec App - Eric Colday Noubissi.jpg",
     title: "Nec App",
     description:
       "Application Mobile (React Native)",
@@ -209,7 +209,7 @@ export const Projects = [
   },
   {
     id: 12,
-    image: "/home/3.jpg",
+    image: "/home/Association IDS - Eric Colday Noubissi.jpg",
     title: "Association IDS",
     description:
       "Sites web (WordPress)",

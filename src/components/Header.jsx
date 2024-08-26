@@ -3,6 +3,7 @@ import { createClient } from "@/prismicio";
 import Link from "next/link";
 import ThemeToggle from "./themeToggle/ThemeToggle";
 import { PrismicNextLink } from "@prismicio/next";
+import MobileMenu from "./MobileMenu";
 import ButtonsToggle from "./ButtonsToggle";
 
 export default async function Header() {
@@ -17,6 +18,7 @@ export default async function Header() {
       </Link>
       <div className="flex justify-center items-center gap-[20px] text-[16px]">
         <ButtonsToggle settings={settings} />
+        <MobileMenu settings={settings}/>
         <ThemeToggle />
       </div>
     </div>

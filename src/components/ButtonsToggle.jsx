@@ -14,7 +14,7 @@ function ButtonsToggle({ settings }) {
   };
   return (
     <div>
-      {showLinks ? (
+      {/* {showLinks ? (
         <CloseIcon
           onClick={handleShowLinks}
           className={
@@ -38,7 +38,7 @@ function ButtonsToggle({ settings }) {
           onClick={handleShowLinks}
           style={{ filter: "invert(1)" }}
         />
-      )}
+      )} */}
       <div
         className={
           showLinks
