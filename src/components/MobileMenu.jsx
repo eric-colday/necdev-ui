@@ -33,7 +33,7 @@ const MobileMenu = ({ settings }) => {
           {settings.data.navigation.map(({ link, label }) => (
             <div
               key={label}
-              className="text-[40px] text-center"
+              className="text-[40px] text-center my-5 "
               onClick={() => setIsOpen((prev) => !prev)}
             >
               <PrismicNextLink field={link}>{label}</PrismicNextLink>
