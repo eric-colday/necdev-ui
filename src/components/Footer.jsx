@@ -71,8 +71,8 @@ const Footer = () => {
         <div
           style={
             theme === "dark"
-              ? { backgroundColor: "#0f172a" }
-              : { backgroundColor: "#0f172a" }
+              ? { backgroundColor: "#0d1520" }
+              : { backgroundColor: "#0d1520" }
           }
           className="flex flex-col justify-center items-center rounded-md w-1/2 p-10 shadow-xl  max-[1024px]:w-full  "
         >
@@ -92,6 +92,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/ecnoubissi/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <LinkedInIcon />
               </Link>
@@ -101,6 +102,7 @@ const Footer = () => {
                 href="https://github.com/eric-colday"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Github"
               >
                 <GitHubIcon />
               </Link>

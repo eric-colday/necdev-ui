@@ -60,8 +60,9 @@ export default function FormContact() {
               <input
                 type="text"
                 value={name}
+                placeholder="Prénom et Nom"
                 onChange={(e) => setName(e.target.value)}
-                className={`w-full rounded-md border border-[#7c8587] p-3 ${
+                className={`w-full rounded-md border border-[#7c8587] p-3 bg-[#0d1520] placeholder:italic placeholder:text-sm placeholder:text-[#7c8587] ${
                   err
                     ? "border-red-500 focus:outline-red"
                     : "border-[#7c8587] focus:outline-blue"
@@ -76,8 +77,9 @@ export default function FormContact() {
               <input
                 type="email"
                 value={email}
+                placeholder="E-mail"
                 onChange={(e) => setEmail(e.target.value)}
-                className={`w-full rounded-md border border-[#7c8587] p-3 ${
+                className={`w-full rounded-md border border-[#7c8587] p-3 bg-[#0d1520] placeholder:italic placeholder:text-sm placeholder:text-[#7c8587] ${
                   err
                     ? "border-red-500 focus:outline-red"
                     : "border-[#7c8587] focus:outline-blue"
@@ -92,8 +94,9 @@ export default function FormContact() {
           <input
             type="text"
             value={subject}
+            placeholder="Objet"
             onChange={(e) => setSubject(e.target.value)}
-            className={`w-full rounded-md border border-[#7c8587] p-3 ${
+            className={`w-full rounded-md border border-[#7c8587] p-3 bg-[#0d1520] placeholder:italic placeholder:text-sm placeholder:text-[#7c8587] ${
               err
                 ? "border-red-500 focus:outline-red"
                 : "border-[#7c8587] focus:outline-blue"
@@ -106,7 +109,8 @@ export default function FormContact() {
           <textarea
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className={`rounded-md border border-[#7c8587] p-3 w-full h-40 ${
+            placeholder="Message ..."
+            className={`rounded-md border border-[#7c8587] p-3 bg-[#0d1520] placeholder:italic placeholder:text-sm placeholder:text-[#7c8587] w-full h-40 ${
               err
                 ? "border-red-500 focus:outline-red"
                 : "border-[#7c8587] focus:outline-blue"
