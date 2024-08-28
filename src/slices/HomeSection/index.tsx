@@ -114,7 +114,7 @@ const HomeSection = ({ slice }: HomeSectionProps): JSX.Element => {
             <PrismicRichText field={slice.primary.paragraph}
               components={{
                 paragraph: ({ children }) => <motion.span
-                  // variants={fadeInAnimationsVariants2}
+                  variants={fadeInAnimationsVariants2}
                   initial="initial"
                   // animate={controls}
                   whileInView="animate"
@@ -130,7 +130,7 @@ const HomeSection = ({ slice }: HomeSectionProps): JSX.Element => {
             <PrismicRichText field={slice.primary.heading_1}
               components={{
                 heading1: ({ children }) => <motion.h1
-                  // variants={fadeInAnimationsVariants2}
+                  variants={fadeInAnimationsVariants2}
                   initial="initial"
                   // animate={controls}
                   whileInView="animate"
@@ -146,7 +146,7 @@ const HomeSection = ({ slice }: HomeSectionProps): JSX.Element => {
             <PrismicRichText field={slice.primary.heading_2}
               components={{
                 heading2: ({ children }) => <motion.h2
-                  // variants={fadeInAnimationsVariants2}
+                  variants={fadeInAnimationsVariants2}
                   initial="initial"
                   // animate={controls}
                   whileInView="animate"
@@ -162,8 +162,9 @@ const HomeSection = ({ slice }: HomeSectionProps): JSX.Element => {
             <PrismicRichText field={slice.primary.description}
               components={{
                 paragraph: ({ children }) => <motion.p
-                  // variants={fadeInAnimationsVariants2}
+                  variants={fadeInAnimationsVariants2}
                   initial="initial"
+                  // animate={controls}
                   whileInView="animate"
                   viewport={{
                     once: true,
