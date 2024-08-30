@@ -44,16 +44,13 @@ export default function FormContact() {
     console.log(await response.json());
   };
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-[10px] text-[#7c8587] "
-    >
+    <form onSubmit={handleSubmit}>
       {success ? (
         <div className="text-green-500">{success}</div>
       ) : (
         <div>
-          <div className="w-full flex gap-4 max-[425px]:flex-col">
-            <div>
+          <div className="flex gap-4 max-[425px]:flex-col">
+            <div className="w-full pb-4">
               <label htmlFor="">
                 Nom <span className="text-red-500 ">*</span>
               </label>
@@ -70,7 +67,7 @@ export default function FormContact() {
               />
               {err && <div className="text-red-500">{err}</div>}
             </div>
-            <div>
+            <div className="w-full">
               <label htmlFor="">
                 Email <span className="text-red-500 ">*</span>{" "}
               </label>
@@ -88,21 +85,23 @@ export default function FormContact() {
               {err && <div className="text-red-500">{err}</div>}
             </div>
           </div>
-          <label htmlFor="">
-            Objet <span className="text-red-500 ">*</span>
-          </label>
-          <input
-            type="text"
-            value={subject}
-            placeholder="Objet"
-            onChange={(e) => setSubject(e.target.value)}
-            className={`w-full rounded-md border border-[#7c8587] p-3 bg-[#0d1520] placeholder:italic placeholder:text-sm placeholder:text-[#7c8587] ${
-              err
-                ? "border-red-500 focus:outline-red"
-                : "border-[#7c8587] focus:outline-blue"
-            }`}
-          />
-          {err && <div className="text-red-500">{err}</div>}
+          <div className="pb-4">
+            <label htmlFor="">
+              Objet <span className="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              value={subject}
+              placeholder="Objet"
+              onChange={(e) => setSubject(e.target.value)}
+              className={`w-full rounded-md border border-[#7c8587] p-3 bg-[#0d1520] placeholder:italic placeholder:text-sm placeholder:text-[#7c8587] ${
+                err
+                  ? "border-red-500 focus:outline-red"
+                  : "border-[#7c8587] focus:outline-blue"
+              }`}
+            />
+            {err && <div className="text-red-500">{err}</div>}
+          </div>
           <label htmlFor="">
             Message <span className="text-red-500 ">*</span>
           </label>
