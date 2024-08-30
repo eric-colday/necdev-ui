@@ -104,7 +104,7 @@ const AboutSection = ({ slice }: AboutSectionProps): JSX.Element => {
                 heading2: ({ children }) => <h2 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px]">{children}</h2>
               }}
             />
-            <div className="mb-10 w-10 border-2 border-[#7c8587]"></div>
+            <div className="mb-10 w-10 border-4 border-[#468bff]"></div>
           </div>
           <PrismicRichText field={slice.primary.paragraph_3}
             components={{

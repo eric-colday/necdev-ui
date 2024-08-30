@@ -62,7 +62,7 @@ const ServiceSection = ({ slice }: ServiceSectionProps): JSX.Element => {
                 </h2>
               ),
             }} />
-          <div className="mb-10 w-10 border-2 border-[#7c8587]"></div>
+          <div className="mb-10 w-10 border-4 border-[#468bff]"></div>
         </motion.div>
         <div className="grid grid-cols-4 gap-4 py-8 max-[871px]:grid-cols-2 max-[468px]:grid-cols-1 ">
           <motion.div

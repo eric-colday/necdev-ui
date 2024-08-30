@@ -20,7 +20,7 @@ const cardVariants = {
       delay: 0.05,
     },
   },
-};
+}; 
 
 const ProjetSection = () => {
   const { theme } = useContext(ThemeContext);

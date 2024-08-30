@@ -53,7 +53,7 @@ const Footer = () => {
         </motion.h2>
         <motion.div
           variants={cardVariants}
-          className="mb-10 w-10 border-2 border-[#7c8587]"
+          className="mb-10 w-10 border-4 border-[#468bff]"
         ></motion.div>
         <motion.p variants={cardVariants} className="text-center">
           Prêt à discuter de votre projet ? Contactez-moi dès aujourd'hui <br/> pour

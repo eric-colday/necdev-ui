@@ -75,7 +75,7 @@ const ProjetSection = ({ slice }: ProjetSectionProps): JSX.Element => {
           />
 
           <motion.div
-            className="mb-10 w-10 border-2 border-[#7c8587]"
+            className="mb-10 w-10 border-4 border-[#468bff]"
           ></motion.div>
           <PrismicRichText field={slice.primary.paragraph}
             components={{

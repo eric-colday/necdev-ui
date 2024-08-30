@@ -6,6 +6,7 @@ import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import Image from "next/image";
 import { PrismicNextImage } from "@prismicio/next";
+import { motion } from "framer-motion";
 
 /**
  * Props for `ServiceList`.
@@ -15,6 +16,22 @@ export type ServiceListProps = SliceComponentProps<Content.ServiceListSlice>;
 /**
  * Component for "ServiceList" Slices.
  */
+
+const cardVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.05,
+    },
+  },
+};
+
 const ServiceList = ({ slice }: ServiceListProps): JSX.Element => {
   const { theme } = useContext(ThemeContext);
 
@@ -38,7 +55,7 @@ const ServiceList = ({ slice }: ServiceListProps): JSX.Element => {
           }
           }
         />
-        <div className="mb-10 w-10 border-2 border-[#7c8587]"></div>
+        <div className="mb-10 w-10 border-4 border-[#468bff]"></div>
         <PrismicRichText field={slice.primary.paragraph}
           components={{
             paragraph: ({ children }) => (
@@ -68,18 +85,29 @@ const ServiceList = ({ slice }: ServiceListProps): JSX.Element => {
               }
             />
           </div>
-          <div className="w-[500px] max-[920px]:w-auto  ">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.6 }}
+            variants={cardVariants}
+            className="w-[500px] max-[920px]:w-auto  "
+          >
             <PrismicNextImage field={slice.primary.image}
               className="w-[500px] max-[920px]:w-auto"
             />
-          </div>
+          </motion.div>
         </div>
         <div className="flex max-[920px]:flex-col justify-center items-center gap-10 mt-20">
-          <div className="w-[500px] max-[920px]:w-auto  ">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.6 }}
+            variants={cardVariants}
+            className="w-[500px] max-[920px]:w-auto  ">
             <PrismicNextImage field={slice.primary.image_2}
               className="w-[500px] max-[920px]:w-auto"
             />
-          </div>
+          </motion.div>
           <div className="w-[500px] max-[920px]:w-auto max-[920px]:text-center">
             <PrismicRichText field={slice.primary.heading_3}
               components={{
@@ -118,18 +146,28 @@ const ServiceList = ({ slice }: ServiceListProps): JSX.Element => {
               }
             />
           </div>
-          <div className="w-[500px] max-[920px]:w-auto  ">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.6 }}
+            variants={cardVariants}
+            className="w-[500px] max-[920px]:w-auto  ">
             <PrismicNextImage field={slice.primary.image_3}
               className="w-[500px] max-[920px]:w-auto"
             />
-          </div>
+          </motion.div>
         </div>
         <div className="flex max-[920px]:flex-col justify-center items-center gap-10 mt-20">
-          <div className="w-[500px] max-[920px]:w-auto  ">
+          <motion.div
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, amount: 0.6 }}
+            variants={cardVariants}
+            className="w-[500px] max-[920px]:w-auto  ">
             <PrismicNextImage field={slice.primary.image_4}
               className="w-[500px] max-[920px]:w-auto"
             />
-          </div>
+          </motion.div>
           <div className="w-[500px] max-[920px]:w-auto max-[920px]:text-center">
             <PrismicRichText field={slice.primary.heading_5}
               components={{

@@ -17,7 +17,7 @@ export default async function Page({ searchParams }) {
           <h1 className="text-[50px] font-extrabold text-[#7c8587] max-[425px]:text-[35px] capitalize ">
             {cat ? ` ${decodeURIComponent(cat)}` : <>{page.data.title}</>}
           </h1>
-          <div className="mb-10 w-10 border-2 border-[#7c8587]"></div>
+          <div className="mb-10 w-10 border-4 border-[#468bff]"></div>
           <PrismicRichText
             field={page.data.description}
             components={{
